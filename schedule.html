@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniReg | Weekly Timetable & Schedule</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="student-dashboard.html" class="brand"
+        ><span>WEC</span>University</a
+      >
+      <div class="nav-links">
+        <a href="student-dashboard.html">Dashboard</a>
+        <a href="courses.html">Course Catalog</a>
+        <a href="schedule.html" class="active">My Schedule</a>
+        <a href="index.html" style="color: var(--status-full)">Logout</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <h1>Fall 2026 Weekly Timetable</h1>
+          <p>
+            Visual schedule grid and enrolled course management. You can review
+            time slots or drop courses if needed.
+          </p>
+        </div>
+      </div>
+
+      <!-- Visual Weekly Schedule Grid (Sunday to Thursday) -->
+      <section class="card" style="margin-bottom: 2rem">
+        <div class="card-header">
+          <div>
+            <span class="card-subtitle">TIMETABLE MATRIX</span>
+            <h2 class="card-title">Weekly Calendar View</h2>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table style="text-align: center; font-size: 0.85rem">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: 600; color: var(--fourth-color)">
+                  08:30 AM
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+                <td
+                  style="
+                    background: rgba(246, 56, 220, 0.1);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  CE211<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Logic Design</span
+                  >
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+                <td
+                  style="
+                    background: rgba(246, 56, 220, 0.1);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  CE211<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Logic Design</span
+                  >
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 600; color: var(--fourth-color)">
+                  10:00 AM
+                </td>
+                <td
+                  style="
+                    background: rgba(246, 56, 220, 0.15);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  CS202<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Data Structures</span
+                  >
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+                <td
+                  style="
+                    background: rgba(246, 56, 220, 0.15);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  CS202<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Data Structures</span
+                  >
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+                <td
+                  style="
+                    background: rgba(46, 204, 113, 0.15);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  MA205<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Calculus (09:00)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: 600; color: var(--fourth-color)">
+                  01:00 PM
+                </td>
+                <td
+                  style="
+                    background: rgba(90, 61, 92, 0.3);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  IS201<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Database Systems</span
+                  >
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+                <td
+                  style="
+                    background: rgba(90, 61, 92, 0.3);
+                    border-radius: 4px;
+                    color: var(--text-main);
+                    font-weight: 600;
+                  "
+                >
+                  IS201<br /><span
+                    style="font-size: 0.75rem; color: var(--text-muted)"
+                    >Database Systems</span
+                  >
+                </td>
+                <td style="color: var(--text-muted)">-</td>
+                <td style="color: var(--text-muted)">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Enrolled Courses Management Table -->
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <span class="card-subtitle">MANAGE ENROLLMENT</span>
+            <h2 class="card-title">Registered Courses & Drop Options</h2>
+          </div>
+          <a
+            href="courses.html"
+            class="btn btn-primary"
+            style="font-size: 0.85rem; padding: 0.4rem 0.9rem"
+            >+ Add More Courses</a
+          >
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Credits</th>
+                <th>Instructor</th>
+                <th>Schedule Slot</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CS202</td>
+                <td>Data Structures</td>
+                <td>3</td>
+                <td>Dr. Tarek Ahmed</td>
+                <td>Sun / Tue 10:00 AM</td>
+                <td>
+                  <a
+                    class="btn btn-danger"
+                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
+                    >Drop Course</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>CE211</td>
+                <td>Logic Design</td>
+                <td>3</td>
+                <td>Dr. Michael Youssef</td>
+                <td>Mon / Wed 08:30 AM</td>
+                <td>
+                  <a
+                    class="btn btn-danger"
+                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
+                    >Drop Course</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>IS201</td>
+                <td>Database Systems</td>
+                <td>3</td>
+                <td>Dr. Sherif Hassan</td>
+                <td>Sun / Tue 01:00 PM</td>
+                <td>
+                  <a
+                    class="btn btn-danger"
+                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
+                    >Drop Course</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>MA205</td>
+                <td>Multivariable Calculus</td>
+                <td>3</td>
+                <td>Dr. Nadia Mourad</td>
+                <td>Thu 09:00 AM</td>
+                <td>
+                  <a
+                    class="btn btn-danger"
+                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
+                    >Drop Course</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>HU102</td>
+                <td>Technical Writing</td>
+                <td>3</td>
+                <td>Dr. Mona Zaki</td>
+                <td>Thu 02:00 PM</td>
+                <td>
+                  <a
+                    class="btn btn-danger"
+                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
+                    >Drop Course</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Student Course Registration System &bull; Information Systems Analysis &
+      Design Project
+    </footer>
+  </body>
+</html>

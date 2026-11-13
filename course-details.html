@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniReg | Course Details - Data Structures</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="student-dashboard.html" class="brand"><span>WEC</span>University</a>
+    <div class="nav-links">
+      <a href="student-dashboard.html">Dashboard</a>
+      <a href="courses.html" class="active">Course Catalog</a>
+      <a href="schedule.html">My Schedule</a>
+      <a href="index.html" style="color: var(--status-full);">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Breadcrumb / Back Link -->
+    <div style="margin-bottom: 1.5rem;">
+      <a href="courses.html" style="color: var(--fourth-color); text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+        &larr; Back to Course Catalog
+      </a>
+    </div>
+
+    <!-- Course Header Card -->
+    <div class="card" style="margin-bottom: 2rem; border-left: 4px solid var(--fourth-color);">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="card-subtitle">CS202 &bull; Computer Engineering Department</span>
+          <h1 style="font-size: 2rem; margin-top: 0.25rem; color: var(--text-main);">Data Structures</h1>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center;">
+          <span class="badge badge-open">Seats: 24 / 30 Available</span>
+          <span class="badge badge-accent">3 Credit Hours</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two Column Details Grid -->
+    <div class="grid-2">
+      
+      <!-- Left Column: Syllabus & Learning Objectives -->
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <span class="card-subtitle">ACADEMIC CONTENT</span>
+            <h2 class="card-title">Course Syllabus & Topics</h2>
+          </div>
+        </div>
+
+        <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.95rem;">
+          This course explores advanced linear and non-linear data structures, focusing on their memory representation, algorithm implementation efficiency, and practical application in software engineering.
+        </p>
+
+        <h3 style="font-size: 1.05rem; color: var(--fourth-color); margin-bottom: 0.75rem;">Weekly Outline</h3>
+        <ul style="list-style-type: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-main); font-size: 0.9rem;">
+          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
+            <strong>Weeks 1–3:</strong> Asymptotic notation (Big-O), Recursion analysis, and Advanced Sorting algorithms.
+          </li>
+          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
+            <strong>Weeks 4–6:</strong> Singly & Doubly Linked Lists, Stacks, Queues, and Applications in Expression Evaluation.
+          </li>
+          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
+            <strong>Weeks 7–9:</strong> Binary Trees, Binary Search Trees (BST), AVL Self-Balancing Trees, and Tree Traversals.
+          </li>
+          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
+            <strong>Weeks 10–12:</strong> Priority Queues, Binary Heaps, Hash Tables, and Collision Resolution Techniques.
+          </li>
+          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
+            <strong>Weeks 13–15:</strong> Graph Representations (Adjacency Matrix/List), BFS, DFS, Dijkstra’s Shortest Path, and Final Project.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Right Column: Logistics, Prerequisites & Registration Action -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        
+        <!-- Logistics Card -->
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-subtitle">LOGISTICS</span>
+              <h2 class="card-title">Class Schedule & Faculty</h2>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.95rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--third-color); padding-bottom: 0.5rem;">
+              <span style="color: var(--text-muted);">Instructor</span>
+              <span style="font-weight: 600;">Dr. Tarek Ahmed</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--third-color); padding-bottom: 0.5rem;">
+              <span style="color: var(--text-muted);">Lecture Schedule</span>
+              <span style="font-weight: 600;">Sun / Tue 10:00 AM - 11:30 AM</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--third-color); padding-bottom: 0.5rem;">
+              <span style="color: var(--text-muted);">Location / Lab</span>
+              <span style="font-weight: 600;">Building B, Hall 304</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--third-color); padding-bottom: 0.5rem;">
+              <span style="color: var(--text-muted);">Prerequisite Requirement</span>
+              <span style="color: var(--status-open); font-weight: 600;">CS101 (Satisfied)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Capacity Status</span>
+              <span style="color: var(--status-open); font-weight: 600;">6 Seats Remaining</span>
+            </div>
+          </div>
+
+          <a href="#register-confirm-modal" class="btn btn-primary btn-block">Register for CS202</a>
+        </section>
+
+        <!-- Evaluation Scheme Card -->
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-subtitle">GRADING</span>
+              <h2 class="card-title">Assessment Breakdown</h2>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Midterm Exam</span><span>30%</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Programming Assignments & Labs</span><span>20%</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Semester Project</span><span>15%</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Final Examination</span><span>35%</span></div>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Pure CSS Registration Success Modal -->
+  <div id="register-confirm-modal" class="modal-overlay">
+    <div class="modal-box">
+      <span class="badge badge-open" style="margin-bottom: 1rem;">Validation Passed</span>
+      <h3>Confirm Course Registration</h3>
+      <p>System checked prerequisites (CS101) and seat availability (24/30). Do you want to add <strong>CS202: Data Structures</strong> to your schedule?</p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center;">
+        <a href="schedule.html" class="btn btn-primary">Confirm & Add</a>
+        <a href="#" class="btn btn-secondary">Cancel</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Student Course Registration System &bull; Information Systems Analysis & Design Project
+  </footer>
+
+</body>
+</html>
