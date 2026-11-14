@@ -1,15 +1,17 @@
 
-:root {
-  --first-color: #f7f7f7;  /* Main Background */
-  --second-color: #f5b553; /* Cards, Navbar & Containers */
-  --third-color: #854836;  /* Borders, Inputs & Hover */
-  --fourth-color: #000000; /* Primary Accent & Highlights */
 
-  --text-main: #000000;
-  --text-muted: #60402f;
-  --status-open: #16834a;
-  --status-full: #d62845;
-  --status-warn: #a66b00;
+:root {
+    --first-color: #F1F5F9;  /* Main Background */
+    --second-color: #FFFFFF; /* Cards and Navbar */
+    --third-color: rgb(68, 65, 65);  /* Borders and Inputs */
+    --fourth-color: #0F766E; /* Primary Accent */
+
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+
+    --status-open: #16A34A;
+    --status-full: #DC2626;
+    --status-warn: #D97706;
 }
 
 * {
