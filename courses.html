@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
-      <a href="student-dashboard.html" class="brand"
-        ><span>WEC</span>University</a
-      >
+      <a href="student-dashboard.html" class="brand">
+        <span>WEC</span>University
+      </a>
       <div class="nav-links">
         <a href="student-dashboard.html">Dashboard</a>
         <a href="courses.html" class="active">Course Catalog</a>
         <a href="schedule.html">My Schedule</a>
-        <a href="index.html" style="color: var(--status-full)">Logout</a>
+        <a href="index.html" class="logout-link">Logout</a>
       </div>
     </nav>
-
-    <!-- Main Content -->
     <main class="container">
-      <!-- Page Header -->
       <div class="page-header">
         <div>
           <h1>Fall 2026 Course Catalog</h1>
@@ -32,303 +28,157 @@
           </p>
         </div>
       </div>
-
-      <!-- Course Grid -->
       <div class="grid-3">
-        <!-- Course Card 1: Open -->
         <div class="card">
           <div class="card-header">
             <div>
               <span class="card-subtitle">CS202 &bull; 3 Credits</span>
               <h3 class="card-title">Data Structures</h3>
             </div>
-            <span class="badge badge-open">Seats: 24 / 30</span>
+            <span >Seats: 24 / 30</span>
           </div>
-          <p
-            style="
-              color: var(--text-muted);
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-            "
-          >
+          <p class="course-description">
             Advanced linear and non-linear data structures including trees,
             graphs, heaps, hash tables, and algorithm complexity analysis.
           </p>
-          <div
-            style="
-              font-size: 0.85rem;
-              margin-bottom: 1.25rem;
-              color: var(--text-main);
-            "
-          >
+          <div class="course-info">
             <div><strong>Instructor:</strong> Dr. Tarek Ahmed</div>
             <div><strong>Schedule:</strong> Sun/Tue 10:00 AM - 11:30 AM</div>
             <div><strong>Prerequisite:</strong> CS101 (Passed)</div>
           </div>
-          <div style="display: flex; gap: 0.5rem">
-            <a
-              href="course-details.html"
-              class="btn btn-outline"
-              style="flex: 1; text-align: center"
-              >Details</a
-            >
-            <a
-              href="#registered-success"
-              class="btn btn-primary"
-              style="flex: 1; text-align: center"
-              >Register</a
-            >
+          <div class="course-actions">
+            <a href="course-details.html" class="btn btn-outline">Details</a>
+            <a href="#registered-success" class="btn btn-primary">Register</a>
           </div>
         </div>
-
-        <!-- Course Card 2: Open -->
         <div class="card">
           <div class="card-header">
             <div>
               <span class="card-subtitle">CE211 &bull; 3 Credits</span>
               <h3 class="card-title">Logic Design</h3>
             </div>
-            <span class="badge badge-open">Seats: 28 / 35</span>
+            <span >Seats: 28 / 35</span>
           </div>
-          <p
-            style="
-              color: var(--text-muted);
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-            "
-          >
+          <p class="course-description">
             Boolean algebra, Karnaugh map simplifications, combinational and
             sequential logic circuits, flip-flops, counters, and registers.
           </p>
-          <div
-            style="
-              font-size: 0.85rem;
-              margin-bottom: 1.25rem;
-              color: var(--text-main);
-            "
-          >
+          <div class="course-info">
             <div><strong>Instructor:</strong> Dr. Michael Youssef</div>
             <div><strong>Schedule:</strong> Mon/Wed 08:30 AM - 10:00 AM</div>
             <div><strong>Prerequisite:</strong> None</div>
           </div>
-          <div style="display: flex; gap: 0.5rem">
-            <a
-              href="course-details.html"
-              class="btn btn-outline"
-              style="flex: 1; text-align: center"
-              >Details</a
-            >
-            <a
-              href="#registered-success"
-              class="btn btn-primary"
-              style="flex: 1; text-align: center"
-              >Register</a
-            >
+          <div class="course-actions">
+            <a href="course-details.html" class="btn btn-outline">Details</a>
+            <a href="#registered-success" class="btn btn-primary">Register</a>
           </div>
         </div>
-
-        <!-- Course Card 3: Full (Capacity Check Validation) -->
-        <div class="card" style="border-color: rgba(255, 77, 109, 0.4)">
+        <div class="card course-full">
           <div class="card-header">
             <div>
               <span class="card-subtitle">AI301 &bull; 3 Credits</span>
               <h3 class="card-title">Artificial Intelligence</h3>
             </div>
-            <span class="badge badge-full"> FULL </span>
+            <span >FULL</span>
           </div>
-          <p
-            style="
-              color: var(--text-muted);
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-            "
-          >
+          <p class="course-description">
             Introduction to search algorithms, heuristic evaluation, knowledge
             representation, propositional logic, and machine learning
             fundamentals.
           </p>
-          <div
-            style="
-              font-size: 0.85rem;
-              margin-bottom: 1.25rem;
-              color: var(--text-main);
-            "
-          >
+          <div class="course-info">
             <div><strong>Instructor:</strong> Dr. Samia Kamal</div>
             <div><strong>Schedule:</strong> Thu 01:00 PM - 04:00 PM</div>
             <div><strong>Prerequisite:</strong> CS202</div>
           </div>
-          <div style="display: flex; gap: 0.5rem">
-            <a
-              href="course-details.html"
-              class="btn btn-outline"
-              style="flex: 1; text-align: center"
-              >Details</a
-            >
-            <span class="btn btn-disabled" style="flex: 1; text-align: center"
-              >Capacity Full</span
-            >
+          <div class="course-actions">
+            <a href="course-details.html" class="btn btn-outline">Details</a>
+            <span class="btn btn-disabled">Capacity Full</span>
           </div>
         </div>
-
-        <!-- Course Card 4: Open -->
         <div class="card">
           <div class="card-header">
             <div>
               <span class="card-subtitle">IS201 &bull; 3 Credits</span>
               <h3 class="card-title">Database Systems</h3>
             </div>
-            <span class="badge badge-open">Seats: 15 / 25</span>
+            <span >Seats: 15 / 25</span>
           </div>
-          <p
-            style="
-              color: var(--text-muted);
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-            "
-          >
+          <p class="course-description">
             Relational database models, ER diagrams, SQL DDL/DML, normalization
             up to 3NF, transactions, and indexing strategies.
           </p>
-          <div
-            style="
-              font-size: 0.85rem;
-              margin-bottom: 1.25rem;
-              color: var(--text-main);
-            "
-          >
+          <div class="course-info">
             <div><strong>Instructor:</strong> Dr. Sherif Hassan</div>
             <div><strong>Schedule:</strong> Sun/Tue 01:00 PM - 02:30 PM</div>
             <div><strong>Prerequisite:</strong> None</div>
           </div>
-          <div style="display: flex; gap: 0.5rem">
-            <a
-              href="course-details.html"
-              class="btn btn-outline"
-              style="flex: 1; text-align: center"
-              >Details</a
-            >
-            <a
-              href="#registered-success"
-              class="btn btn-primary"
-              style="flex: 1; text-align: center"
-              >Register</a
-            >
+          <div class="course-actions">
+            <a href="course-details.html" class="btn btn-outline">Details</a>
+            <a href="#registered-success" class="btn btn-primary">Register</a>
           </div>
         </div>
-
-        <!-- Course Card 5: Open -->
         <div class="card">
           <div class="card-header">
             <div>
               <span class="card-subtitle">MA205 &bull; 3 Credits</span>
               <h3 class="card-title">Multivariable Calculus</h3>
             </div>
-            <span class="badge badge-open">Seats: 18 / 30</span>
+            <span >Seats: 18 / 30</span>
           </div>
-          <p
-            style="
-              color: var(--text-muted);
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-            "
-          >
+          <p class="course-description">
             Vectors, partial derivatives, gradient vectors, multiple integrals
             in Cartesian, cylindrical, and spherical coordinates, and vector
             fields.
           </p>
-          <div
-            style="
-              font-size: 0.85rem;
-              margin-bottom: 1.25rem;
-              color: var(--text-main);
-            "
-          >
+          <div class="course-info">
             <div><strong>Instructor:</strong> Dr. Nadia Mourad</div>
             <div><strong>Schedule:</strong> Thu 09:00 AM - 12:00 PM</div>
             <div><strong>Prerequisite:</strong> MA102</div>
           </div>
-          <div style="display: flex; gap: 0.5rem">
-            <a
-              href="course-details.html"
-              class="btn btn-outline"
-              style="flex: 1; text-align: center"
-              >Details</a
-            >
-            <a
-              href="#registered-success"
-              class="btn btn-primary"
-              style="flex: 1; text-align: center"
-              >Register</a
-            >
+          <div class="course-actions">
+            <a href="course-details.html" class="btn btn-outline">Details</a>
+            <a href="#registered-success" class="btn btn-primary">Register</a>
           </div>
         </div>
-
-        <!-- Course Card 6: Full -->
-        <div class="card" style="border-color: rgba(255, 77, 109, 0.4)">
+        <div class="card course-full">
           <div class="card-header">
             <div>
               <span class="card-subtitle">SE303 &bull; 3 Credits</span>
               <h3 class="card-title">Software Engineering</h3>
             </div>
-            <span class="badge badge-full"> FULL </span>
+            <span >FULL</span>
           </div>
-          <p
-            style="
-              color: var(--text-muted);
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-            "
-          >
+          <p class="course-description">
             Software development life cycles, agile methodologies, requirements
             engineering, architectural patterns, and testing frameworks.
           </p>
-          <div
-            style="
-              font-size: 0.85rem;
-              margin-bottom: 1.25rem;
-              color: var(--text-main);
-            "
-          >
+          <div class="course-info">
             <div><strong>Instructor:</strong> Dr. Walid Khaled</div>
             <div><strong>Schedule:</strong> Mon/Wed 11:00 AM - 12:30 PM</div>
             <div><strong>Prerequisite:</strong> IS201</div>
           </div>
-          <div style="display: flex; gap: 0.5rem">
-            <a
-              href="course-details.html"
-              class="btn btn-outline"
-              style="flex: 1; text-align: center"
-              >Details</a
-            >
-            <span class="btn btn-disabled" style="flex: 1; text-align: center"
-              >Capacity Full</span
-            >
+          <div class="course-actions">
+            <a href="course-details.html" class="btn btn-outline">Details</a>
+            <span class="btn btn-disabled">Capacity Full</span>
           </div>
         </div>
       </div>
     </main>
-
-    <!-- Pure CSS Registration Success Modal -->
     <div id="registered-success" class="modal-overlay">
       <div class="modal-box">
-        <span class="badge badge-open" style="margin-bottom: 1rem"
-          >Seat Confirmed</span
-        >
+        <span class=" -open onfirmed</span>
         <h3>Registration Successful!</h3>
         <p>
           The system verified seat availability and successfully added the
           course to your semester schedule.
         </p>
-        <div style="display: flex; gap: 0.75rem; justify-content: center">
+        <div class="modal-actions">
           <a href="schedule.html" class="btn btn-primary">View Timetable</a>
           <a href="courses.html" class="btn btn-secondary">Back to Catalog</a>
         </div>
       </div>
     </div>
-
-  <footer>
-    Student Course Registration System &bull; &commat; 2026
-  </footer>
+    <footer>Student Course Registration System &bull; &commat; 2026</footer>
   </body>
 </html>

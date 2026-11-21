@@ -1,282 +1,349 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEC | Admin Dashboard</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <a href="admin-dashboard.html" class="brand"><span>WEC</span>University</a>
-    <div class="nav-links">
-      <a href="index.html" style="color: var(--status-full);">Logout (Admin)</a>
-    </div>
-  </nav>
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Page Header -->
-    <div class="page-header">
-      <div>
-        <h1>Administrator Management Panel</h1>
-        <p>Manage course catalogs, modify seat capacities, add/delete courses, and review student records.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEC | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="admin-dashboard.html" class="brand">
+        <span>WEC</span>University
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="logout-link">Logout (Admin)</a>
       </div>
-    </div>
-
-    <!-- Admin KPI Summary Grid -->
-    <div class="grid-4" style="margin-bottom: 2rem;">
-      <div class="card" style="padding: 1.2rem; text-align: center;">
-        <span class="card-subtitle">TOTAL COURSES</span>
-        <h2 style="font-size: 2rem; color: var(--text-main); margin-top: 0.25rem;">24</h2>
-        <p style="font-size: 0.8rem; color: var(--status-open);">Active Fall 2026</p>
-      </div>
-      <div class="card" style="padding: 1.2rem; text-align: center;">
-        <span class="card-subtitle">REGISTERED STUDENTS</span>
-        <h2 style="font-size: 2rem; color: var(--fourth-color); margin-top: 0.25rem;">1,420</h2>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">Enrolled Across Majors</p>
-      </div>
-      <div class="card" style="padding: 1.2rem; text-align: center;">
-        <span class="card-subtitle">FULL CAPACITY COURSES</span>
-        <h2 style="font-size: 2rem; color: var(--status-full); margin-top: 0.25rem;">6</h2>
-        <p style="font-size: 0.8rem; color: var(--status-full);">Waitlists Active</p>
-      </div>
-      <div class="card" style="padding: 1.2rem; text-align: center;">
-        <span class="card-subtitle">SYSTEM STATUS</span>
-        <h2 style="font-size: 1.5rem; color: var(--status-open); margin-top: 0.5rem;">Online</h2>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">Database Connected</p>
-      </div>
-    </div>
-
-    <!-- Two Column Layout: Add Course Form & Quick Management -->
-    <div class="grid-2" style="margin-bottom: 2rem;">
-      
-      <!-- Add / Edit Course Form (Req 15) -->
-      <section class="card" id="add-course-form">
-        <div class="card-header">
-          <div>
-            <span class="card-subtitle">CURRICULUM CONTROL</span>
-            <h2 class="card-title">Add New Course</h2>
-          </div>
+    </nav>
+    <main class="container">
+      <div class="page-header">
+        <div>
+          <h1>Administrator Management Panel</h1>
+          <p>
+            Manage course catalogs, modify seat capacities, add/delete courses,
+            and review student records.
+          </p>
         </div>
-
-        <form action="#course-added-success">
-          <div class="grid-2" style="gap: 0.75rem;">
-            <div class="form-group">
-              <label for="new-code">Course Code</label>
-              <input type="text" id="new-code" class="form-control" placeholder="e.g., AI302" required>
-            </div>
-            <div class="form-group">
-              <label for="new-credits">Credit Hours</label>
-              <input type="number" id="new-credits" class="form-control" value="3" min="1" max="4" required>
+      </div>
+      <div class="grid-4 admin-kpi-grid">
+        <div class="card admin-kpi-card">
+          <span class="card-subtitle">TOTAL COURSES</span>
+          <h2 class="admin-kpi-value">24</h2>
+          <p class="admin-kpi-description admin-kpi-success">
+            Active Fall 2026
+          </p>
+        </div>
+        <div class="card admin-kpi-card">
+          <span class="card-subtitle">REGISTERED STUDENTS</span>
+          <h2 class="admin-kpi-value admin-kpi-primary">1,420</h2>
+          <p class="admin-kpi-description text-muted">Enrolled Across Majors</p>
+        </div>
+        <div class="card admin-kpi-card">
+          <span class="card-subtitle">FULL CAPACITY COURSES</span>
+          <h2 class="admin-kpi-value admin-kpi-danger">6</h2>
+          <p class="admin-kpi-description admin-kpi-danger">Waitlists Active</p>
+        </div>
+        <div class="card admin-kpi-card">
+          <span class="card-subtitle">SYSTEM STATUS</span>
+          <h2 class="admin-kpi-status">Online</h2>
+          <p class="admin-kpi-description text-muted">Database Connected</p>
+        </div>
+      </div>
+      <div class="grid-2 admin-management-grid">
+        <section class="card" id="add-course-form">
+          <div class="card-header">
+            <div>
+              <span class="card-subtitle">CURRICULUM CONTROL</span>
+              <h2 class="card-title">Add New Course</h2>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="new-title">Course Title</label>
-            <input type="text" id="new-title" class="form-control" placeholder="e.g., Deep Learning & Neural Networks" required>
-          </div>
-
-          <div class="grid-2" style="gap: 0.75rem;">
-            <div class="form-group">
-              <label for="new-capacity">Seat Capacity</label>
-              <input type="number" id="new-capacity" class="form-control" value="30" min="10" max="100" required>
+          <form action="#course-added-success">
+            <div class="grid-2 form-grid">
+              <div class="form-group">
+                <label for="new-code">Course Code</label>
+                <input
+                  type="text"
+                  id="new-code"
+                  class="form-control"
+                  placeholder="e.g., AI302"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="new-credits">Credit Hours</label>
+                <input
+                  type="number"
+                  id="new-credits"
+                  class="form-control"
+                  value="3"
+                  min="1"
+                  max="4"
+                  required
+                />
+              </div>
             </div>
             <div class="form-group">
-              <label for="new-dept">Department</label>
-              <select id="new-dept" class="form-control">
-                <option>Computer Engineering & AI</option>
-                <option>Computer Science</option>
-                <option>Information Systems</option>
-              </select>
+              <label for="new-title">Course Title</label>
+              <input
+                type="text"
+                id="new-title"
+                class="form-control"
+                placeholder="e.g., Deep Learning & Neural Networks"
+                required
+              />
+            </div>
+            <div class="grid-2 form-grid">
+              <div class="form-group">
+                <label for="new-capacity">Seat Capacity</label>
+                <input
+                  type="number"
+                  id="new-capacity"
+                  class="form-control"
+                  value="30"
+                  min="10"
+                  max="100"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="new-dept">Department</label>
+                <select id="new-dept" class="form-control">
+                  <option>Computer Engineering & AI</option>
+                  <option>Computer Science</option>
+                  <option>Information Systems</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="new-schedule">Schedule Slot & Instructor</label>
+              <input
+                type="text"
+                id="new-schedule"
+                class="form-control"
+                placeholder="Sun/Tue 02:30 PM &bull; Dr. Ahmed Ali"
+                required
+              />
+            </div>
+            <a
+              href="#course-added-success"
+              class="btn btn-primary btn-block admin-save-button"
+            >
+              Save & Publish Course
+            </a>
+          </form>
+        </section>
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-subtitle">ADMINISTRATIVE GUIDELINES</span>
+              <h2 class="card-title">System Policies & Rules</h2>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="new-schedule">Schedule Slot & Instructor</label>
-            <input type="text" id="new-schedule" class="form-control" placeholder="Sun/Tue 02:30 PM &bull; Dr. Ahmed Ali" required>
-          </div>
-
-          <a href="#course-added-success" class="btn btn-primary btn-block" style="margin-top: 0.5rem;">Save & Publish Course</a>
-        </form>
-      </section>
-
-      <!-- System Notice & Quick Filters -->
+          <p class="admin-policy-intro">
+            As an administrator, you oversee database records and ensure
+            prerequisite enforcement and room allocations remain consistent.
+          </p>
+          <ul class="admin-policy-list">
+            <li class="admin-policy-item">
+              <strong>Capacity Limits:</strong>
+              Decreasing seat capacity below current enrollment triggers
+              automatic waitlist notifications.
+            </li>
+            <li class="admin-policy-item">
+              <strong>Course Deletion:</strong>
+              Deleting a course with active student registrations requires
+              department chair approval.
+            </li>
+            <li class="admin-policy-item">
+              <strong>Student Records:</strong>
+              Admins can override prerequisite holds for graduating senior
+              students.
+            </li>
+          </ul>
+        </section>
+      </div>
       <section class="card">
         <div class="card-header">
           <div>
-            <span class="card-subtitle">ADMINISTRATIVE GUIDELINES</span>
-            <h2 class="card-title">System Policies & Rules</h2>
+            <span class="card-subtitle">DATABASE RECORDS</span>
+            <h2 class="card-title">Active Course Catalog & Management</h2>
           </div>
         </div>
-
-        <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.95rem;">
-          As an administrator, you oversee database records and ensure prerequisite enforcement and room allocations remain consistent.
-        </p>
-
-        <ul style="list-style-type: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem; color: var(--text-main);">
-          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
-            <strong>Capacity Limits:</strong> Decreasing seat capacity below current enrollment triggers automatic waitlist notifications.
-          </li>
-          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
-            <strong>Course Deletion:</strong> Deleting a course with active student registrations requires department chair approval.
-          </li>
-          <li style="background: var(--first-color); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--third-color);">
-            <strong>Student Records:</strong> Admins can override prerequisite holds for graduating senior students.
-          </li>
-        </ul>
-      </section>
-
-    </div>
-
-    <!-- Course Management & CRUD Table -->
-    <section class="card">
-      <div class="card-header">
-        <div>
-          <span class="card-subtitle">DATABASE RECORDS</span>
-          <h2 class="card-title">Active Course Catalog & Management</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Course Title</th>
+                <th>Dept</th>
+                <th>Capacity</th>
+                <th>Enrolled</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CS202</td>
+                <td>Data Structures</td>
+                <td>Computer Eng</td>
+                <td>30</td>
+                <td>24</td>
+                <td><span>Open</span></td>
+                <td>
+                  <div class="admin-table-actions">
+                    <a
+                      href="#edit-modal"
+                      class="btn btn-secondary admin-table-button"
+                      >Edit</a
+                    >
+                    <a
+                      href="#delete-modal"
+                      class="btn btn-danger admin-table-button"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CE211</td>
+                <td>Logic Design</td>
+                <td>Computer Eng</td>
+                <td>35</td>
+                <td>28</td>
+                <td><span>Open</span></td>
+                <td>
+                  <div class="admin-table-actions">
+                    <a
+                      href="#edit-modal"
+                      class="btn btn-secondary admin-table-button"
+                      >Edit</a
+                    >
+                    <a
+                      href="#delete-modal"
+                      class="btn btn-danger admin-table-button"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>AI301</td>
+                <td>Artificial Intelligence</td>
+                <td>Computer Eng</td>
+                <td>40</td>
+                <td>40</td>
+                <td><span>Full</span></td>
+                <td>
+                  <div class="admin-table-actions">
+                    <a
+                      href="#edit-modal"
+                      class="btn btn-secondary admin-table-button"
+                      >Edit</a
+                    >
+                    <a
+                      href="#delete-modal"
+                      class="btn btn-danger admin-table-button"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>IS201</td>
+                <td>Database Systems</td>
+                <td>Information Sys</td>
+                <td>25</td>
+                <td>15</td>
+                <td><span>Open</span></td>
+                <td>
+                  <div class="admin-table-actions">
+                    <a
+                      href="#edit-modal"
+                      class="btn btn-secondary admin-table-button"
+                      >Edit</a
+                    >
+                    <a
+                      href="#delete-modal"
+                      class="btn btn-danger admin-table-button"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>MA205</td>
+                <td>Multivariable Calculus</td>
+                <td>Basic Sciences</td>
+                <td>30</td>
+                <td>18</td>
+                <td><span>Open</span></td>
+                <td>
+                  <div class="admin-table-actions">
+                    <a
+                      href="#edit-modal"
+                      class="btn btn-secondary admin-table-button"
+                      >Edit</a
+                    >
+                    <a
+                      href="#delete-modal"
+                      class="btn btn-danger admin-table-button"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <span class="badge badge-accent">Showing All 24 Courses</span>
-      </div>
-
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>Course Title</th>
-              <th>Dept</th>
-              <th>Capacity</th>
-              <th>Enrolled</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>CS202</td>
-              <td>Data Structures</td>
-              <td>Computer Eng</td>
-              <td>30</td>
-              <td>24</td>
-              <td><span class="badge badge-open">Open</span></td>
-              <td>
-                <div style="display: flex; gap: 0.4rem;">
-                  <a href="#edit-modal" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Edit</a>
-                  <a href="#delete-modal" class="btn btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Delete</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>CE211</td>
-              <td>Logic Design</td>
-              <td>Computer Eng</td>
-              <td>35</td>
-              <td>28</td>
-              <td><span class="badge badge-open">Open</span></td>
-              <td>
-                <div style="display: flex; gap: 0.4rem;">
-                  <a href="#edit-modal" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Edit</a>
-                  <a href="#delete-modal" class="btn btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Delete</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>AI301</td>
-              <td>Artificial Intelligence</td>
-              <td>Computer Eng</td>
-              <td>40</td>
-              <td>40</td>
-              <td><span class="badge badge-full">Full</span></td>
-              <td>
-                <div style="display: flex; gap: 0.4rem;">
-                  <a href="#edit-modal" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Edit</a>
-                  <a href="#delete-modal" class="btn btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Delete</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>IS201</td>
-              <td>Database Systems</td>
-              <td>Information Sys</td>
-              <td>25</td>
-              <td>15</td>
-              <td><span class="badge badge-open">Open</span></td>
-              <td>
-                <div style="display: flex; gap: 0.4rem;">
-                  <a href="#edit-modal" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Edit</a>
-                  <a href="#delete-modal" class="btn btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Delete</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>MA205</td>
-              <td>Multivariable Calculus</td>
-              <td>Basic Sciences</td>
-              <td>30</td>
-              <td>18</td>
-              <td><span class="badge badge-open">Open</span></td>
-              <td>
-                <div style="display: flex; gap: 0.4rem;">
-                  <a href="#edit-modal" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Edit</a>
-                  <a href="#delete-modal" class="btn btn-danger" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Delete</a>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Pure CSS Success Modal for Adding Course -->
-  <div id="course-added-success" class="modal-overlay">
-    <div class="modal-box">
-      <span class="badge badge-open" style="margin-bottom: 1rem;">Database Updated</span>
-      <h3>Course Successfully Added</h3>
-      <p>The new course has been registered in the system catalog and is now available for student registration.</p>
-      <div style="display: flex; gap: 0.75rem; justify-content: center;">
-        <a href="admin-dashboard.html" class="btn btn-primary">OK</a>
+      </section>
+    </main>
+    <div id="course-added-success" class="modal-overlay">
+      <div class="modal-box">
+        <span class="-open modal-">Database Updated</span>
+        <h3>Course Successfully Added</h3>
+        <p>
+          The new course has been registered in the system catalog and is now
+          available for student registration.
+        </p>
+        <div class="modal-actions modal-actions-center">
+          <a href="admin-dashboard.html" class="btn btn-primary">OK</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Pure CSS Edit Modal Placeholder -->
-  <div id="edit-modal" class="modal-overlay">
-    <div class="modal-box" style="text-align: left;">
-      <h3 style="margin-bottom: 1rem;">Edit Course Record</h3>
-      <div class="form-group">
-        <label>Update Course Capacity</label>
-        <input type="number" class="form-control" value="35">
-      </div>
-      <div class="form-group">
-        <label>Update Instructor</label>
-        <input type="text" class="form-control" value="Dr. Tarek Ahmed">
-      </div>
-      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
-        <a href="admin-dashboard.html" class="btn btn-primary">Save Changes</a>
-        <a href="#" class="btn btn-secondary">Cancel</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Pure CSS Delete Modal Placeholder -->
-  <div id="delete-modal" class="modal-overlay">
-    <div class="modal-box">
-      <span class="badge badge-full" style="margin-bottom: 1rem;">Critical Action</span>
-      <h3>Delete Course Record?</h3>
-      <p>Are you sure you want to remove this course from the database? This will unenroll any registered students.</p>
-      <div style="display: flex; gap: 0.75rem; justify-content: center;">
-        <a href="admin-dashboard.html" class="btn btn-danger">Yes, Delete</a>
-        <a href="#" class="btn btn-secondary">Cancel</a>
+    <div id="edit-modal" class="modal-overlay">
+      <div class="modal-box admin-modal-left">
+        <h3 class="admin-modal-title">Edit Course Record</h3>
+        <div class="form-group">
+          <label>Update Course Capacity</label>
+          <input type="number" class="form-control" value="35" />
+        </div>
+        <div class="form-group">
+          <label>Update Instructor</label>
+          <input type="text" class="form-control" value="Dr. Tarek Ahmed" />
+        </div>
+        <div class="modal-actions modal-actions-end">
+          <a href="admin-dashboard.html" class="btn btn-primary"
+            >Save Changes</a
+          >
+          <a href="#" class="btn btn-secondary">Cancel</a>
+        </div>
       </div>
     </div>
-  </div>
-  <footer>
-    Student Course Registration System &bull; &commat; 2026
-  </footer>
-
-</body>
+    <div id="delete-modal" class="modal-overlay">
+      <div class="modal-box">
+        <span class="-full modal-">Critical Action</span>
+        <h3>Delete Course Record?</h3>
+        <p>
+          Are you sure you want to remove this course from the database? This
+          will unenroll any registered students.
+        </p>
+        <div class="modal-actions modal-actions-center">
+          <a href="admin-dashboard.html" class="btn btn-danger">Yes, Delete</a>
+          <a href="#" class="btn btn-secondary">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <footer>Student Course Registration System &bull; &commat; 2026</footer>
+  </body>
 </html>

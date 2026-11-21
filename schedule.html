@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
-      <a href="student-dashboard.html" class="brand"
-        ><span>WEC</span>University</a
-      >
+      <a href="student-dashboard.html" class="brand">
+        <span>WEC</span>University
+      </a>
       <div class="nav-links">
         <a href="student-dashboard.html">Dashboard</a>
         <a href="courses.html">Course Catalog</a>
         <a href="schedule.html" class="active">My Schedule</a>
-        <a href="index.html" style="color: var(--status-full)">Logout</a>
+        <a href="index.html" class="logout-link">Logout</a>
       </div>
     </nav>
-
-    <!-- Main Content -->
     <main class="container">
-      <!-- Page Header -->
       <div class="page-header">
         <div>
           <h1>Fall 2026 Weekly Timetable</h1>
@@ -32,17 +28,15 @@
           </p>
         </div>
       </div>
-
-      <section class="card" style="margin-bottom: 2rem">
+      <section class="card section-spacing">
         <div class="card-header">
           <div>
             <span class="card-subtitle">TIMETABLE</span>
             <h2 class="card-title">Weekly Calendar View</h2>
           </div>
         </div>
-
         <div class="table-wrapper">
-          <table style="text-align: center; font-size: 0.85rem">
+          <table class="timetable">
             <thead>
               <tr>
                 <th>Time</th>
@@ -55,124 +49,54 @@
             </thead>
             <tbody>
               <tr>
-                <td style="font-weight: 600; color: var(--fourth-color)">
-                  08:30 AM
+                <td class="time-cell">08:30 AM</td>
+                <td class="empty-cell">-</td>
+                <td class="timetable-logic">
+                  CE211
+                  <span>Logic Design</span>
                 </td>
-                <td style="color: var(--text-muted)">-</td>
-                <td
-                  style="
-                    background: rgba(246, 56, 220, 0.1);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  CE211<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Logic Design</span
-                  >
+                <td class="empty-cell">-</td>
+                <td class="timetable-logic">
+                  CE211
+                  <span>Logic Design</span>
                 </td>
-                <td style="color: var(--text-muted)">-</td>
-                <td
-                  style="
-                    background: rgba(246, 56, 220, 0.1);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  CE211<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Logic Design</span
-                  >
-                </td>
-                <td style="color: var(--text-muted)">-</td>
+                <td class="empty-cell">-</td>
               </tr>
               <tr>
-                <td style="font-weight: 600; color: var(--fourth-color)">
-                  10:00 AM
+                <td class="time-cell">10:00 AM</td>
+                <td class="timetable-data">
+                  CS202
+                  <span>Data Structures</span>
                 </td>
-                <td
-                  style="
-                    background: rgba(246, 56, 220, 0.15);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  CS202<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Data Structures</span
-                  >
+                <td class="empty-cell">-</td>
+                <td class="timetable-data">
+                  CS202
+                  <span>Data Structures</span>
                 </td>
-                <td style="color: var(--text-muted)">-</td>
-                <td
-                  style="
-                    background: rgba(246, 56, 220, 0.15);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  CS202<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Data Structures</span
-                  >
-                </td>
-                <td style="color: var(--text-muted)">-</td>
-                <td
-                  style="
-                    background: rgba(46, 204, 113, 0.15);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  MA205<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Calculus (09:00)</span
-                  >
+                <td class="empty-cell">-</td>
+                <td class="timetable-calculus">
+                  MA205
+                  <span>Calculus (09:00)</span>
                 </td>
               </tr>
               <tr>
-                <td style="font-weight: 600; color: var(--fourth-color)">
-                  01:00 PM
+                <td class="time-cell">01:00 PM</td>
+                <td class="timetable-database">
+                  IS201
+                  <span>Database Systems</span>
                 </td>
-                <td
-                  style="
-                    background: rgba(90, 61, 92, 0.3);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  IS201<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Database Systems</span
-                  >
+                <td class="empty-cell">-</td>
+                <td class="timetable-database">
+                  IS201
+                  <span>Database Systems</span>
                 </td>
-                <td style="color: var(--text-muted)">-</td>
-                <td
-                  style="
-                    background: rgba(90, 61, 92, 0.3);
-                    border-radius: 4px;
-                    color: var(--text-main);
-                    font-weight: 600;
-                  "
-                >
-                  IS201<br /><span
-                    style="font-size: 0.75rem; color: var(--text-muted)"
-                    >Database Systems</span
-                  >
-                </td>
-                <td style="color: var(--text-muted)">-</td>
-                <td style="color: var(--text-muted)">-</td>
+                <td class="empty-cell">-</td>
+                <td class="empty-cell">-</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
-
       <section class="card">
         <div class="card-header">
           <div>
@@ -180,7 +104,6 @@
             <h2 class="card-title">Registered Courses & Drop Options</h2>
           </div>
         </div>
-
         <div class="table-wrapper">
           <table>
             <thead>
@@ -201,11 +124,9 @@
                 <td>Dr. Tarek Ahmed</td>
                 <td>Sun / Tue 10:00 AM</td>
                 <td>
-                  <a
-                    class="btn btn-danger"
-                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
-                    >Drop Course</a
-                  >
+                  <button type="button" class="btn btn-danger drop-button">
+                    Drop Course
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -215,11 +136,9 @@
                 <td>Dr. Michael Youssef</td>
                 <td>Mon / Wed 08:30 AM</td>
                 <td>
-                  <a
-                    class="btn btn-danger"
-                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
-                    >Drop Course</a
-                  >
+                  <button type="button" class="btn btn-danger drop-button">
+                    Drop Course
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -229,11 +148,9 @@
                 <td>Dr. Sherif Hassan</td>
                 <td>Sun / Tue 01:00 PM</td>
                 <td>
-                  <a
-                    class="btn btn-danger"
-                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
-                    >Drop Course</a
-                  >
+                  <button type="button" class="btn btn-danger drop-button">
+                    Drop Course
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -243,11 +160,9 @@
                 <td>Dr. Nadia Mourad</td>
                 <td>Thu 09:00 AM</td>
                 <td>
-                  <a
-                    class="btn btn-danger"
-                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
-                    >Drop Course</a
-                  >
+                  <button type="button" class="btn btn-danger drop-button">
+                    Drop Course
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -257,11 +172,9 @@
                 <td>Dr. Mona Zaki</td>
                 <td>Thu 02:00 PM</td>
                 <td>
-                  <a
-                    class="btn btn-danger"
-                    style="padding: 0.3rem 0.7rem; font-size: 0.8rem"
-                    >Drop Course</a
-                  >
+                  <button type="button" class="btn btn-danger drop-button">
+                    Drop Course
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -270,8 +183,6 @@
       </section>
     </main>
 
-  <footer>
-    Student Course Registration System &bull; &commat; 2026
-  </footer>
+    <footer>Student Course Registration System &bull; &commat; 2026</footer>
   </body>
 </html>
