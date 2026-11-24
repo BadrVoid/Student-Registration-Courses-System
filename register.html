@@ -7,17 +7,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-      <a href="index.html" class="brand"> <span>WEC</span>University </a>
+      <a href="index.html" class="brand"><span>WEC</span>University</a>
     </nav>
-    <main class="container auth-main">
-      <div class="register-wrapper">
-        <div class="auth-heading">
-          <h1 class="auth-title">Create Student Account</h1>
-          <p class="auth-description">
+
+    <!-- Main Content -->
+    <main
+      class="container"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div style="max-width: 580px; width: 100%">
+        <div style="text-align: center; margin-bottom: 1.75rem">
+          <h1 style="font-size: 1.9rem">Create Student Account</h1>
+          <p style="color: var(--text-muted); font-size: 0.95rem">
             Register your academic profile to enroll in Fall 2026 courses
           </p>
         </div>
+
         <section class="card">
           <div class="card-header">
             <div>
@@ -25,17 +37,16 @@
               <h2 class="card-title">Account Registration</h2>
             </div>
           </div>
+
           <form action="#account-created">
-            <div class="grid-2 form-grid">
+            <div class="grid-2" style="gap: 0.75rem">
               <div class="form-group">
                 <label for="reg-name">Full Name</label>
                 <input
                   type="text"
                   id="reg-name"
-                  name="fullName"
                   class="form-control"
-                  placeholder="Enter your name..."
-                  autocomplete="name"
+                  placeholder="enter your name..."
                   required
                 />
               </div>
@@ -44,72 +55,53 @@
                 <input
                   type="text"
                   id="reg-id"
-                  name="studentId"
                   class="form-control"
                   placeholder="20240512"
                   required
                 />
               </div>
             </div>
+
             <div class="form-group">
               <label for="reg-email">Academic Email Address</label>
               <input
                 type="email"
                 id="reg-email"
-                name="email"
                 class="form-control"
                 placeholder="name@university.edu"
-                autocomplete="email"
                 required
               />
             </div>
-            <div class="grid-2 form-grid">
+
+            <div class="grid-2" style="gap: 0.75rem">
               <div class="form-group">
                 <label for="reg-dept">Department / Major</label>
-                <select
-                  id="reg-dept"
-                  name="department"
-                  class="form-control"
-                  required
-                >
-                  <option value="Computer Engineering & AI">
-                    Computer Engineering & AI
-                  </option>
-                  <option value="Computer Science">Computer Science</option>
-                  <option value="Information Systems">
-                    Information Systems
-                  </option>
-                  <option value="Software Engineering">
-                    Software Engineering
-                  </option>
+                <select id="reg-dept" class="form-control">
+                  <option>Computer Engineering & AI</option>
+                  <option>Computer Science</option>
+                  <option>Information Systems</option>
+                  <option>Software Engineering</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="reg-level">Academic Level</label>
-                <select
-                  id="reg-level"
-                  name="academicLevel"
-                  class="form-control"
-                  required
-                >
-                  <option value="Level 1">Level 1</option>
-                  <option value="Level 2" selected>Level 2</option>
-                  <option value="Level 3">Level 3</option>
-                  <option value="Level 4">Level 4</option>
+                <select id="reg-level" class="form-control">
+                  <option>Level 1</option>
+                  <option selected>Level 2</option>
+                  <option>Level 3</option>
+                  <option>Level 4</option>
                 </select>
               </div>
             </div>
-            <div class="grid-2 form-grid">
+
+            <div class="grid-2" style="gap: 0.75rem">
               <div class="form-group">
                 <label for="reg-pass">Create Password</label>
                 <input
                   type="password"
                   id="reg-pass"
-                  name="password"
                   class="form-control"
                   placeholder="Min. 8 characters"
-                  minlength="8"
-                  autocomplete="new-password"
                   required
                 />
               </div>
@@ -118,26 +110,50 @@
                 <input
                   type="password"
                   id="reg-confirm-pass"
-                  name="confirmPassword"
                   class="form-control"
                   placeholder="Re-enter password"
-                  minlength="8"
-                  autocomplete="new-password"
                   required
                 />
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-block form-submit">
-              Register Student Account
-            </button>
+
+            <a
+              href="#account-created"
+              class="btn btn-primary btn-block"
+              style="margin-top: 0.75rem"
+              >Register Student Account</a
+            >
           </form>
-          <div class="auth-bottom">
+
+          <div
+            style="
+              margin-top: 1.5rem;
+              padding-top: 1.25rem;
+              border-top: 1px solid var(--third-color);
+              text-align: center;
+              font-size: 0.9rem;
+              color: var(--text-muted);
+            "
+          >
             Already have an account?
-            <a href="index.html" class="auth-register-link"> Back to Login </a>
+            <a
+              href="index.html"
+              style="
+                color: var(--fourth-color);
+                font-weight: 600;
+                text-decoration: none;
+                margin-left: 0.25rem;
+              "
+            >
+              Back to Login</a
+            >
           </div>
         </section>
       </div>
     </main>
-    <footer>Student Course Registration System &bull; &commat; 2026</footer>
+  <footer>
+    Student Course Registration System &bull; &commat; 2026
+  </footer>
+  <script src="app.js"></script>
   </body>
 </html>
