@@ -1,58 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEC | System Login</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <a href="index.html" class="brand"><span>WEC</span>University</a>
-  </nav>
-  <!-- Main Content -->
-  <main class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <div style="max-width: 460px; width: 100%;">
-      <div style="text-align: center; margin-bottom: 1.75rem;">
-        <span class="badge badge-accent" style="margin-bottom: 0.75rem;">Fall Semester 2026</span>
-        <h1 style="font-size: 1.9rem;">Welcome Back</h1>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">Sign in to access your academic portal</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WEC | System Login</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="brand"> <span>WEC</span>University </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container auth-main">
+      <div class="auth-wrapper">
+        <div class="auth-heading">
+          <span class="badge badge-accent"> Fall Semester 2026 </span>
+
+          <h1 class="auth-title">Welcome Back</h1>
+
+          <p class="auth-description">Sign in to access your academic portal</p>
+        </div>
+
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-subtitle"> AUTHENTICATION </span>
+            </div>
+          </div>
+
+          <form action="student-dashboard.html" method="get">
+            <div class="form-group">
+              <label for="login-id">University ID</label>
+
+              <input
+                type="text"
+                id="login-id"
+                class="form-control"
+                placeholder="e.g. 202400189"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="login-pass">Password</label>
+
+              <input
+                type="password"
+                id="login-pass"
+                class="form-control"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+
+            <div class="auth-actions">
+              <button type="submit" class="btn btn-primary btn-block">
+                Login
+              </button>
+            </div>
+          </form>
+
+          <div class="auth-bottom">
+            Don't have a student account yet?
+
+            <a href="register.html" class="auth-register-link">
+              Create Account &rarr;
+            </a>
+          </div>
+        </section>
       </div>
+    </main>
 
-      <section class="card">
-        <div class="card-header">
-          <div>
-            <span class="card-subtitle">AUTHENTICATION</span>
-          </div>
-        </div>
+    <footer>Student Course Registration System &bull; @ 2026</footer>
 
-        <form action="student-dashboard.html" method="get">
-          <div class="form-group">
-            <label for="login-id">University ID </label>
-            <input type="text" id="login-id" class="form-control" placeholder="e.g. 202400189 " required>
-          </div>
-
-          <div class="form-group">
-            <label for="login-pass">Password</label>
-            <input type="password" id="login-pass" class="form-control" placeholder="••••••••" required>
-          </div>
-
-          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
-            <a  class="btn btn-primary btn-block">Login </a>
-          </div>
-        </form>
-
-        <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--third-color); text-align: center; font-size: 0.9rem; color: var(--text-muted);">
-          Don't have a student account yet? 
-          <a href="register.html" style="color: var(--fourth-color); font-weight: 600; text-decoration: none; margin-left: 0.25rem;">Create Account &rarr;</a>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer>
-    Student Course Registration System &bull; &commat; 2026
-  </footer>
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const registerBtn = document.querySelector('a[href="#account-created"]');
+  const registerForm = document.querySelector("form");
 
-  if (registerBtn) {
-    registerBtn.addEventListener("click", (e) => {
+  if (registerForm && document.getElementById("reg-name")) {
+    registerForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
       const fullName = document.getElementById("reg-name").value.trim();
@@ -37,14 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert("Account created successfully! Redirecting to login...");
+
       window.location.href = "index.html";
     });
   }
 
-  const loginBtn = document.querySelector("form .btn-primary");
+  const loginForm = document.querySelector("form");
 
-  if (loginBtn && document.getElementById("login-id")) {
-    loginBtn.addEventListener("click", (e) => {
+  if (loginForm && document.getElementById("login-id")) {
+    loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
       const loginId = document.getElementById("login-id").value.trim();
@@ -55,16 +56,26 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // Admin Login
       if (loginId === "admin") {
         if (loginPass === "admin123") {
-          localStorage.setItem("wec_currentUser", JSON.stringify({ role: "admin", id: "admin" }));
+          localStorage.setItem(
+            "wec_currentUser",
+            JSON.stringify({
+              role: "admin",
+              id: "admin",
+            }),
+          );
+
           window.location.href = "admin-dashboard.html";
         } else {
           alert("Invalid Administrator password.");
         }
+
         return;
       }
 
+      // Student Login
       if (!/^\d+$/.test(loginId)) {
         alert("University Student ID must contain numbers only.");
         return;
